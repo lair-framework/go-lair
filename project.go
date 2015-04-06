@@ -9,7 +9,7 @@ type Project struct {
 	Description  string    `json:"description" bson:"description"`
 	Owner        string    `json:"description" bson:"owner"`
 	Contributors []string  `json"contributors" bson:"contributors"`
-	Commands     []string  `json:"commands" bson:"commands"`
+	Commands     []Command `json:"commands" bson:"commands"`
 	Notes        []Note    `json:"notes" bson:"notes"`
 	DroneLog     []string  `json:"drone_log" bson:"drone_log"`
 	Messages     []Message `json:"messages" bson:"messages"`
@@ -26,4 +26,10 @@ type Message struct {
 type File struct {
 	Name string `json:"name" bson:"name"`
 	URL  string `json:"url" bson:"url"`
+}
+
+// Command is used to track tool commands that were run.
+type Command struct {
+	Tool    string `json:"tool" bson:"tool"`
+	Command string `json:"command" bson:"command"`
 }
