@@ -2,9 +2,9 @@ package lair
 
 // Host is a single Lair host.
 type Host struct {
-	Id             string   `json"_id" bson:"_id"`
+	Id             string   `json:"_id" bson:"_id"`
 	ProjectId      string   `json:"project_id" bson:"project_id"`
-	LongAddr       uint32   `json:"long_addr" bson:"long_addr"`
+	LongAddr       uint64   `json:"long_addr" bson:"long_addr"`
 	StringAddr     string   `json:"string_addr" bson:"string_addr"`
 	MacAddr        string   `json:"mac_addr" bson:"mac_addr"`
 	Hostnames      []string `json:"hostnames" bson:"hostnames"`
