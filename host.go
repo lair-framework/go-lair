@@ -14,6 +14,7 @@ type Host struct {
 	Status         string   `json:"status" bson:"status"`
 	LastModifiedBy string   `json:"last_modified_by" bson:"last_modified_by"`
 	Flag           bool     `json:"flag" bson:"flag"`
+	Ports          []Port   `json:"ports"`
 }
 
 // OS fingerprint for a host.

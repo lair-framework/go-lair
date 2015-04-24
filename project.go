@@ -2,18 +2,21 @@ package lair
 
 // Project is the root for all information pertaining to a Lair project.
 type Project struct {
-	Id           string    `json:"_id" bson:"_id"`
-	ProjectName  string    `json:"project_name" bson:"project_name"`
-	Industry     string    `json:"industry" bson:"industry"`
-	CreationDate string    `json:"creation_date" bson:"creation_date"`
-	Description  string    `json:"description" bson:"description"`
-	Owner        string    `json:"description" bson:"owner"`
-	Contributors []string  `json"contributors" bson:"contributors"`
-	Commands     []Command `json:"commands" bson:"commands"`
-	Notes        []Note    `json:"notes" bson:"notes"`
-	DroneLog     []string  `json:"drone_log" bson:"drone_log"`
-	Messages     []Message `json:"messages" bson:"messages"`
-	Files        []File    `json:"files" bson:"files"`
+	Tool            string          `json:"tool"`
+	Id              string          `json:"_id" bson:"_id"`
+	ProjectName     string          `json:"project_name" bson:"project_name"`
+	Industry        string          `json:"industry" bson:"industry"`
+	CreationDate    string          `json:"creation_date" bson:"creation_date"`
+	Description     string          `json:"description" bson:"description"`
+	Owner           string          `json:"description" bson:"owner"`
+	Contributors    []string        `json"contributors" bson:"contributors"`
+	Commands        []Command       `json:"commands" bson:"commands"`
+	Notes           []Note          `json:"notes" bson:"notes"`
+	DroneLog        []string        `json:"drone_log" bson:"drone_log"`
+	Messages        []Message       `json:"messages" bson:"messages"`
+	Files           []File          `json:"files" bson:"files"`
+	Hosts           []Host          `json:"hosts"`
+	Vulnerabilities []Vulnerability `json:"vulnerabilities"`
 }
 
 // Message is for sending messages to other users in the project.
