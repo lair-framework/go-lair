@@ -11,7 +11,7 @@ type Host struct {
 	OS             OS        `json:"os" bson:"os"`
 	Notes          []Note    `json:"notes" bson:"notes"`
 	StatusMessage  string    `json:"statusMessage" bson:"statusMessage"`
-	Tags           []string  `json:"tags" bson:"tags`
+	Tags           []string  `json:"tags" bson:"tags"`
 	Status         string    `json:"status" bson:"status"`
 	LastModifiedBy string    `json:"lastModifiedBy" bson:"lastModifiedBy"`
 	IsFlagged      bool      `json:"isFlagged" bson:"isFlagged"`
