@@ -2,19 +2,20 @@ package lair
 
 // Host is a single Lair host.
 type Host struct {
-	Id             string   `json:"_id" bson:"_id"`
-	ProjectId      string   `json:"project_id" bson:"project_id"`
-	LongAddr       uint64   `json:"long_addr" bson:"long_addr"`
-	StringAddr     string   `json:"string_addr" bson:"string_addr"`
-	MacAddr        string   `json:"mac_addr" bson:"mac_addr"`
-	Hostnames      []string `json:"hostnames" bson:"hostnames"`
-	OS             []OS     `json:"os" bson:"os"`
-	Notes          []Note   `json:"notes" bson:"notes"`
-	Alive          bool     `json:"alive" bson:"alive"`
-	Status         string   `json:"status" bson:"status"`
-	LastModifiedBy string   `json:"last_modified_by" bson:"last_modified_by"`
-	Flag           bool     `json:"flag" bson:"flag"`
-	Ports          []Port   `json:"ports"`
+	ID             string    `json:"_id" bson:"_id"`
+	ProjectID      string    `json:"projectId" bson:"projectId"`
+	LongIPv4Addr   uint64    `json:"longIpv4Addr" bson:"longIpv4Addr"`
+	IPv4           string    `json:"ipv4" bson:"ipv4"`
+	MAC            string    `json:"mac" bson:"mac"`
+	Hostnames      []string  `json:"hostnames" bson:"hostnames"`
+	OS             OS        `json:"os" bson:"os"`
+	Notes          []Note    `json:"notes" bson:"notes"`
+	StatusMessage  string    `json:"statusMessage" bson:"statusMessage"`
+	Tags           []string  `json:"tags" bson:"tags`
+	Status         string    `json:"status" bson:"status"`
+	LastModifiedBy string    `json:"lastModifiedBy" bson:"lastModifiedBy"`
+	IsFlagged      bool      `json:"isFlagged" bson:"isFlagged"`
+	Services       []Service `json:"services"`
 }
 
 // OS fingerprint for a host.

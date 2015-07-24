@@ -5,5 +5,5 @@ package lair
 type Note struct {
 	Title          string `json:"title" bson:"title"`
 	Content        string `json:"content" bson:"content"`
-	LastModifiedBy string `json:"last_modified_by" bson:"last_modified_by"`
+	LastModifiedBy string `json:"lastModifiedBy" bson:"lastModifiedBy"`
 }
