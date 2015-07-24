@@ -1,5 +1,7 @@
 package lair
 
+// WebDirectory is a path from a web listener and is a child
+// of a Host. Port is not a relationship to a Service.
 type WebDirectory struct {
 	ID             string `json:"_id" bson:"_id"`
 	ProjectID      string `json:"projectId" bson:"projectId"`
