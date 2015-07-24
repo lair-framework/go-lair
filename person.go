@@ -1,5 +1,8 @@
 package lair
 
+// Person is used to store information related to a single person
+// for a project. Most fields map to AD. LastloggedIn is used to create
+// a loose relationship to a Host by ip.
 type Person struct {
 	ID                string            `json:"_id" bson:"_id"`
 	ProjectID         string            `json:"projectId" bson:"projectId"`
@@ -22,6 +25,7 @@ type Person struct {
 	LoggedIn          []string          `json:"loggedIn" bson:"loggedIn"`
 }
 
+// PersonReference is used to link a person to a 3rd party site.
 type PersonReference struct {
 	Description string `json:"description" bson:"description"`
 	Username    string `json:"username" bson:"username"`

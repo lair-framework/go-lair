@@ -20,7 +20,7 @@ type Issue struct {
 	IsFlagged      bool             `json:"isFlagged" bson:"isFlagged"`
 	Status         string           `json:"status" bson:"status"`
 	LastModifiedBy string           `json:"lastModifiedBy "bson:"lastModifiedBy"`
-	Notes []Note `json:"notes" bson:"notes"`
+	Notes          []Note           `json:"notes" bson:"notes"`
 }
 
 // IssueHost is a single host record for a issue.
@@ -30,13 +30,13 @@ type IssueHost struct {
 	Protocol string `json:"protocol" bson:"protocol"`
 }
 
-// PluginId is used to store a id from an automated tool.
+// PluginID is used to store a id from an automated tool.
 type PluginID struct {
 	Tool string `json:"tool" bson:"tool"`
 	ID   string `json:"id" bson:"id"`
 }
 
-// Reference is a 3rd party containing issue information
+// IssueReference is a 3rd party containing issue information
 type IssueReference struct {
 	Link string `json:"link" bson:"link"`
 	Name string `json:"name" bson:"name"`

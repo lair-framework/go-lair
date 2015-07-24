@@ -1,5 +1,6 @@
 package lair
 
+// Netblock is used to store Whois data.
 type Netblock struct {
 	ProjectID      string `json:"projectId" bson:"projectId"`
 	ASN            string `json:"asn" bson:"asn"`
