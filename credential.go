@@ -4,11 +4,12 @@ package lair
 // Host and Service may be used to created loose relationships to host by ip and/or port.
 // Username can be used to create a loose relationship to a person by principal name.
 type Credential struct {
-	ID       string `json:"_id" bson:"_id"`
-	Username string `json:"username" bson:"username"`
-	Password string `json:"password" bson:"password"`
-	Format   string `json:"format" bson:"format"`
-	Hash     string `json:"hash" bson:"hash"`
-	Host     string `json:"host" bson:"host"`
-	Service  string `json:"service" bson:"service"`
+	ID        string `json:"_id" bson:"_id"`
+	ProjectID string `json:"projectId" bson:"projectId"`
+	Username  string `json:"username" bson:"username"`
+	Password  string `json:"password" bson:"password"`
+	Format    string `json:"format" bson:"format"`
+	Hash      string `json:"hash" bson:"hash"`
+	Host      string `json:"host" bson:"host"`
+	Service   string `json:"service" bson:"service"`
 }

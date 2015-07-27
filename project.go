@@ -20,6 +20,7 @@ type Project struct {
 	People         []Person        `json:"people"`
 	Credentials    []Credential    `json:"credentials"`
 	Files          []File          `json:"files"`
+	ForcePorts     bool            `json:"forcePorts"`
 }
 
 // Command is used to track tool commands that were run.
