@@ -21,6 +21,7 @@ type Issue struct {
 	Status         string           `json:"status" bson:"status"`
 	LastModifiedBy string           `json:"lastModifiedBy "bson:"lastModifiedBy"`
 	Notes          []Note           `json:"notes" bson:"notes"`
+	Files          []File           `json:"files" bson:"filed"`
 }
 
 // IssueHost is a single host record for a issue.
