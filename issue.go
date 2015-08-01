@@ -16,7 +16,7 @@ type Issue struct {
 	PluginIDs      []PluginID       `json:"pluginIds" bson:"pluginIds"`
 	CVEs           []string         `json:"cves" bson:"cves"`
 	References     []IssueReference `json:"references" bson:"references"`
-	IdentifiedBy   []string         `json:"identified_by" bson:"identifiedBy"`
+	IdentifiedBy   []IdentifiedBy   `json:"identified_by" bson:"identifiedBy"`
 	IsFlagged      bool             `json:"isFlagged" bson:"isFlagged"`
 	Status         string           `json:"status" bson:"status"`
 	LastModifiedBy string           `json:"lastModifiedBy "bson:"lastModifiedBy"`
@@ -41,4 +41,9 @@ type PluginID struct {
 type IssueReference struct {
 	Link string `json:"link" bson:"link"`
 	Name string `json:"name" bson:"name"`
+}
+
+// IdentifiedBy is used to show what identfied the issue.
+type IdentifiedBy struct {
+	Tool string `json:"tool"`
 }
