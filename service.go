@@ -13,5 +13,5 @@ type Service struct {
 	IsFlagged      bool   `json:"isFlagged" bson:"isFlagged"`
 	LastModifiedBy string `json:"lastModifiedBy" bson:"lastModifiedBy"`
 	Notes          []Note `json:"notes" bson:"notes"`
-	Files          []File `json:"files" bson:"filed"`
+	Files          []File `json:"files" bson:"files"`
 }

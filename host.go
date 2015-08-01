@@ -15,7 +15,7 @@ type Host struct {
 	Status         string         `json:"status" bson:"status"`
 	LastModifiedBy string         `json:"lastModifiedBy" bson:"lastModifiedBy"`
 	IsFlagged      bool           `json:"isFlagged" bson:"isFlagged"`
-	Files          []File         `json:"files" bson:"filed"`
+	Files          []File         `json:"files" bson:"files"`
 	WebDirectories []WebDirectory `json:"webDirectories"`
 	Services       []Service      `json:"services"`
 }
