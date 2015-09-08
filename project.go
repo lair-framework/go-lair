@@ -19,6 +19,7 @@ type Project struct {
 	Netblocks      []Netblock      `json:"netblocks"`
 	People         []Person        `json:"people"`
 	Credentials    []Credential    `json:"credentials"`
+	Files          []File          `json:"files"`
 }
 
 // Command is used to track tool commands that were run.
